@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     '/nuxt-custom-fetch': { redirect: { to: 'https://nuxt.com/docs/guide/recipes/custom-usefetch', statusCode: 302 } }
   },
   hub: {
-    kv: true
+    kv: true,
+    cache: true
   },
   ui: {
     icons: ['simple-icons']
