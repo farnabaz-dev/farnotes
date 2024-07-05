@@ -8,8 +8,11 @@ export default eventHandler(async (event) => {
   if (!slug) {
     throw createError({ statusCode: 400, message: 'Missing slug' })
   }
-
-  let note = await hubKV().get<Note>(slug)
+try {
+  let note = await hubKV().get<Note>(slug).catch((e) => {
+console.log(e)
+return null
+})
 
   if (!note) {
     note = { body: '# Hello' }
@@ -17,4 +20,9 @@ export default eventHandler(async (event) => {
   }
 
   return { slug, ...note }
+
+}catch(e) {
+console.log("e", e)
+return "dsd"
+}
 })
