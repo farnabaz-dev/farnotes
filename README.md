@@ -1,4 +1,4 @@
-# Atinotes
+# Farnotes
 
 Read more on https://notes.atinux.com
 
