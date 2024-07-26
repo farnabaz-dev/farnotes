@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+debug: true,
   future: { compatibilityVersion: 4 },
   extends: [
     // https://ui.nuxt.com/pro
